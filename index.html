@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Registration Page -->
+    <div class="container" id="registerPage">
+        <h2>Register</h2>
+
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="text" id="regUsername" placeholder="Username">
+        <input type="password" id="regPassword" placeholder="Password">
+
+        <button onclick="register()">Register</button>
+
+        <p>Already registered?
+            <a href="#" onclick="showLogin()">Login</a>
+        </p>
+    </div>
+
+    <!-- Login Page -->
+    <div class="container" id="loginPage" style="display:none">
+        <h2>Login</h2>
+
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p>New user?
+            <a href="#" onclick="showRegister()">Register</a>
+        </p>
+    </div>
+
+    <!-- Student Dashboard -->
+    <div id="dashboard" style="display:none">
+        <h2>Student Management System</h2>
+        <p id="welcome"></p>
+
+        <h3>Enter Student Details</h3>
+
+        <input type="text" id="studentId" placeholder="Student ID">
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="text" id="studentCourse" placeholder="Course">
+        <input type="number" id="studentMarks" placeholder="Marks">
+
+        <br>
+        <button onclick="addStudent()">Add Student</button>
+        <button onclick="logout()">Logout</button>
+
+        <h3>Student Details</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
